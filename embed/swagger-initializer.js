@@ -7,8 +7,15 @@ window.onload = function() {
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
-      SwaggerUIBundle.presets.apis
-    ]
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    oauth: {
+      clientId: "kcp-dev",
+      appName: "Faros API",
+      scopeSeparator: " ",
+      additionalQueryStringParams: {}
+    },
   });
 
   //</editor-fold>
